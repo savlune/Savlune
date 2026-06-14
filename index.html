@@ -38,7 +38,6 @@
       overflow-x: hidden;
     }
 
-    /* ── NOISE TEXTURE OVERLAY ── */
     body::before {
       content: '';
       position: fixed;
@@ -57,16 +56,12 @@
     }
 
     /* ── HERO ── */
-    .hero {
-      padding: 60px 0 48px;
-      text-align: center;
-    }
+    .hero { padding: 60px 0 48px; text-align: center; }
 
     .brand-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-family: 'Inter', sans-serif;
       font-size: 10px;
       font-weight: 500;
       letter-spacing: 0.3em;
@@ -76,15 +71,9 @@
       opacity: 0;
       animation: fadeUp 0.8s ease 0.1s forwards;
     }
-
-    .brand-eyebrow::before,
-    .brand-eyebrow::after {
-      content: '';
-      display: block;
-      width: 32px;
-      height: 1px;
-      background: var(--gold);
-      opacity: 0.6;
+    .brand-eyebrow::before, .brand-eyebrow::after {
+      content: ''; display: block; width: 32px; height: 1px;
+      background: var(--gold); opacity: 0.6;
     }
 
     .brand-logo {
@@ -99,16 +88,12 @@
     }
 
     .gold-rule {
-      width: 0;
-      height: 1px;
+      width: 0; height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
       margin: 24px auto;
       animation: expandRule 1s ease 0.7s forwards;
     }
-
-    @keyframes expandRule {
-      to { width: 160px; }
-    }
+    @keyframes expandRule { to { width: 160px; } }
 
     .hero-tagline {
       font-family: 'Cormorant Garant', serif;
@@ -131,7 +116,6 @@
       animation: fadeUp 0.9s ease 0.7s forwards;
     }
 
-    /* ── VALUES ── */
     .values {
       display: flex;
       flex-wrap: wrap;
@@ -141,39 +125,19 @@
       opacity: 0;
       animation: fadeUp 0.9s ease 0.85s forwards;
     }
-
     .value-pill {
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      display: flex; align-items: center; gap: 6px;
       padding: 6px 14px;
       border: 1px solid var(--border);
       border-radius: 50px;
-      font-size: 11.5px;
-      font-weight: 400;
-      color: var(--gold-pale);
-      letter-spacing: 0.02em;
+      font-size: 11.5px; font-weight: 400;
+      color: var(--gold-pale); letter-spacing: 0.02em;
     }
-
-    .value-pill::before {
-      content: '✦';
-      font-size: 7px;
-      color: var(--gold);
-    }
+    .value-pill::before { content: '✦'; font-size: 7px; color: var(--gold); }
 
     /* ── STATS ── */
-    .stats-section {
-      padding: 48px 0;
-      opacity: 0;
-      animation: fadeUp 0.9s ease 1s forwards;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
+    .stats-section { padding: 48px 0; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .stat-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -184,160 +148,198 @@
       overflow: hidden;
       transition: border-color 0.3s ease;
     }
-
     .stat-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60%;
-      height: 1px;
+      content: ''; position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 60%; height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
-
-    .stat-card:hover {
-      border-color: rgba(201,169,110,0.45);
-    }
-
+    .stat-card:hover { border-color: rgba(201,169,110,0.45); }
     .stat-number {
       font-family: 'Cormorant Garant', serif;
-      font-size: 34px;
-      font-weight: 600;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 6px;
+      font-size: 34px; font-weight: 600;
+      color: var(--gold); line-height: 1; margin-bottom: 6px;
     }
-
     .stat-label {
-      font-size: 11px;
-      font-weight: 400;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-      line-height: 1.4;
+      font-size: 11px; font-weight: 400;
+      color: var(--muted); letter-spacing: 0.04em; line-height: 1.4;
     }
 
     /* ── DIVIDER ── */
     .section-divider {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+      display: flex; align-items: center; gap: 14px;
       margin: 8px 0 40px;
     }
-
-    .section-divider::before,
-    .section-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
+    .section-divider::before, .section-divider::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
     }
-
     .section-label {
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 0.35em;
-      color: var(--gold);
-      text-transform: uppercase;
-      white-space: nowrap;
+      font-size: 9px; font-weight: 600;
+      letter-spacing: 0.35em; color: var(--gold);
+      text-transform: uppercase; white-space: nowrap;
     }
 
-    /* ── SERVICE BUTTONS ── */
-    .services-section {
-      padding-bottom: 52px;
-    }
+    /* ══════════════════════════════════════
+       SERVICE CARDS — REDESIGNED PREMIUM
+    ══════════════════════════════════════ */
+    .services-section { padding-bottom: 52px; }
 
     .services-title {
       font-family: 'Cormorant Garant', serif;
-      font-size: 28px;
-      font-weight: 400;
+      font-size: 30px; font-weight: 400;
       color: var(--white);
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 6px;
+    }
+    .services-subtitle {
+      font-size: 12px; color: var(--muted);
+      text-align: center; margin-bottom: 32px; font-weight: 300;
     }
 
+    /* JUAL / BELI group label */
+    .group-block { margin-bottom: 28px; }
+
+    .group-header {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 14px;
+    }
+    .group-tag {
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 50px;
+      white-space: nowrap;
+    }
+    .group-tag.sell {
+      background: var(--gold); color: #0A0E1A;
+    }
+    .group-tag.buy {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+    .group-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+    }
+
+    /* 3-col for "Jual" (3 items), 3-col for "Beli" (3 items) */
     .services-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 9px;
     }
 
+    /* THE CARD */
     .service-btn {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      padding: 20px 18px;
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 16px;
       text-decoration: none;
       cursor: pointer;
-      transition: all 0.28s ease;
+      transition: all 0.32s cubic-bezier(0.22,0.61,0.36,1);
       position: relative;
       overflow: hidden;
+      min-height: 148px;
     }
 
-    .service-btn::after {
+    /* Top shimmer line */
+    .service-btn::before {
       content: '';
       position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 0;
-      background: var(--gold);
-      border-radius: 1px;
-      transition: width 0.28s ease;
+      top: 0; left: 12%; right: 12%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,169,110,0.6), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
     }
+    .service-btn:hover::before { opacity: 1; }
 
+    /* Glow fill */
+    .service-btn::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(201,169,110,0.1) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
     .service-btn:hover {
-      border-color: rgba(201,169,110,0.5);
-      background: rgba(28, 36, 56, 0.9);
-      transform: translateY(-2px);
+      border-color: rgba(201,169,110,0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,169,110,0.15);
+    }
+    .service-btn:hover::after { opacity: 1; }
+    .service-btn:active { transform: translateY(-1px); }
+
+    /* Icon zone */
+    .card-icon-zone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0 12px;
+      position: relative; z-index: 1;
+    }
+    .card-svg-wrap {
+      width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 10px;
+      background: rgba(201,169,110,0.08);
+      border: 1px solid rgba(201,169,110,0.18);
+      transition: all 0.3s ease;
+    }
+    .service-btn:hover .card-svg-wrap {
+      background: rgba(201,169,110,0.15);
+      border-color: rgba(201,169,110,0.4);
+      transform: scale(1.08) translateY(-1px);
+    }
+    .card-svg-wrap svg {
+      width: 20px; height: 20px;
     }
 
-    .service-btn:hover::after {
-      width: 3px;
+    /* Text content */
+    .card-body {
+      padding: 0 13px 14px;
+      flex: 1; display: flex; flex-direction: column;
+      position: relative; z-index: 1;
+    }
+    .card-badge {
+      font-size: 7.5px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 4px;
+    }
+    .card-title {
+      font-family: 'Cormorant Garant', serif;
+      font-size: 17px; font-weight: 600;
+      color: var(--white); line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .card-tagline {
+      font-size: 9.5px; color: var(--muted);
+      font-weight: 300; line-height: 1.4; flex: 1;
     }
 
-    .service-btn:active {
-      transform: translateY(0);
-    }
-
-    .btn-icon {
-      font-size: 20px;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .btn-type {
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .btn-label {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: var(--white);
-      line-height: 1.3;
-    }
-
-    .btn-arrow {
+    /* Arrow circle */
+    .card-arrow-chip {
       position: absolute;
-      right: 14px;
-      bottom: 16px;
-      font-size: 13px;
-      color: var(--muted);
-      transition: color 0.28s, transform 0.28s;
+      right: 10px; bottom: 10px;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.28s ease;
+      z-index: 1;
     }
-
-    .service-btn:hover .btn-arrow {
-      color: var(--gold);
-      transform: translate(2px, -2px);
+    .card-arrow-chip svg {
+      width: 9px; height: 9px;
+      stroke: var(--muted);
+      transition: stroke 0.28s;
     }
+    .service-btn:hover .card-arrow-chip {
+      border-color: var(--gold);
+      background: rgba(201,169,110,0.14);
+    }
+    .service-btn:hover .card-arrow-chip svg { stroke: var(--gold); }
 
     /* ── WHY SAVLUNE ── */
     .why-section {
@@ -347,135 +349,78 @@
       padding: 36px 28px;
       margin-bottom: 52px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
     }
-
     .why-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
-
     .why-eyebrow {
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 0.3em;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 14px;
+      font-size: 9px; font-weight: 600;
+      letter-spacing: 0.3em; color: var(--gold);
+      text-transform: uppercase; margin-bottom: 14px;
     }
-
     .why-title {
       font-family: 'Cormorant Garant', serif;
-      font-size: 28px;
-      font-weight: 400;
-      color: var(--white);
-      margin-bottom: 18px;
-      line-height: 1.2;
+      font-size: 28px; font-weight: 400;
+      color: var(--white); margin-bottom: 18px; line-height: 1.2;
     }
-
     .why-body {
-      font-size: 13.5px;
-      color: var(--muted);
-      line-height: 1.75;
-      font-weight: 300;
+      font-size: 13.5px; color: var(--muted);
+      line-height: 1.75; font-weight: 300;
     }
 
     /* ── CTA ── */
-    .cta-section {
-      text-align: center;
-      padding-bottom: 60px;
-    }
-
+    .cta-section { text-align: center; padding-bottom: 60px; }
     .cta-label {
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      margin-bottom: 20px;
-      text-transform: uppercase;
+      font-size: 11px; font-weight: 400;
+      letter-spacing: 0.12em; color: var(--muted);
+      margin-bottom: 20px; text-transform: uppercase;
     }
-
     .cta-main-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      display: inline-flex; align-items: center; gap: 10px;
       padding: 16px 36px;
       background: linear-gradient(135deg, #C9A96E 0%, #E8D5B0 50%, #C9A96E 100%);
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--midnight);
-      letter-spacing: 0.04em;
+      border-radius: 50px; text-decoration: none;
+      font-size: 14px; font-weight: 600;
+      color: var(--midnight); letter-spacing: 0.04em;
       transition: all 0.3s ease;
       box-shadow: 0 0 32px rgba(201,169,110,0.25);
     }
-
     .cta-main-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 40px rgba(201,169,110,0.4);
     }
-
-    .cta-main-btn:active {
-      transform: translateY(0);
-    }
-
-    .wa-icon {
-      font-size: 18px;
-    }
+    .cta-main-btn:active { transform: translateY(0); }
+    .wa-icon { font-size: 18px; }
 
     /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 28px 0;
-      text-align: center;
-    }
-
+    footer { border-top: 1px solid var(--border); padding: 28px 0; text-align: center; }
     .footer-brand {
       font-family: 'Cormorant Garant', serif;
-      font-size: 20px;
-      font-weight: 300;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      margin-bottom: 6px;
+      font-size: 20px; font-weight: 300;
+      letter-spacing: 0.2em; color: var(--gold); margin-bottom: 6px;
     }
-
-    .footer-copy {
-      font-size: 11px;
-      color: var(--muted);
-      font-weight: 300;
-    }
+    .footer-copy { font-size: 11px; color: var(--muted); font-weight: 300; }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
-    /* Scroll reveal */
     .reveal {
-      opacity: 0;
-      transform: translateY(24px);
+      opacity: 0; transform: translateY(24px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── REDUCED MOTION ── */
     @media (prefers-reduced-motion: reduce) {
-      *, .reveal, .gold-rule { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; width: 160px !important; }
+      *, .reveal, .gold-rule {
+        animation: none !important; transition: none !important;
+        opacity: 1 !important; transform: none !important; width: 160px !important;
+      }
     }
-
-    /* ── TOUCH STATES ── */
     @media (hover: none) {
       .service-btn:hover { transform: none; }
       .cta-main-btn:hover { transform: none; }
@@ -487,12 +432,11 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <div class="brand-eyebrow">Platform Jual & Beli</div>
+      <div class="brand-eyebrow">Platform Jual &amp; Beli</div>
       <h1 class="brand-logo">SAVLUNE</h1>
       <div class="gold-rule"></div>
       <p class="hero-tagline">Jual &amp; Beli Properti, Tanah,<br>dan Mobil Lebih Mudah</p>
       <p class="hero-sub">Platform penghubung jual beli yang cepat, aman, dan terpercaya.</p>
-
       <div class="values">
         <span class="value-pill">Terpercaya</span>
         <span class="value-pill">Harga Bersaing</span>
@@ -530,120 +474,121 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- SERVICES — REDESIGNED -->
   <section class="services-section reveal">
     <div class="container">
       <div class="section-divider">
         <span class="section-label">Layanan</span>
       </div>
       <h2 class="services-title">Pilih Kebutuhan Anda</h2>
+      <p class="services-subtitle">Tap layanan sesuai kebutuhan Anda — kami langsung siap membantu</p>
 
-      <div class="services-grid">
+      <!-- JUAL GROUP -->
+      <div class="group-block">
+        <div class="group-header">
+          <span class="group-tag sell">Saya Ingin Jual</span>
+          <span class="group-line"></span>
+        </div>
+        <div class="services-grid">
 
-        <a class="service-btn"
-           href="https://wa.me/6282156067048?text=Halo%20Savlune%2C%20saya%20ingin%20menjual%20properti."
-           target="_blank" rel="noopener">
-          <span class="btn-icon">🏠</span>
-          <span class="btn-type">Jual</span>
-          <span class="btn-label">Properti</span>
-          <span class="btn-arrow">↗</span>
-        </a>
+          <!-- Jual Properti -->
+          <a class="service-btn"
+             href="https://wa.me/6282156067048?text=Halo%20Savlune%2C%20saya%20ingin%20menjual%20properti."
+             target="_blank" rel="noopener">
+            <div class="card-icon-zone">
+              <div class="card-svg-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+                  <path d="M9 21V12h6v9"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-badge">Jual</span>
+              <span class="card-title">Properti</span>
+              <span class="card-tagline">Rumah, ruko, kos — kami carikan pembeli serius</span>
+            </div>
+            <div class="card-arrow-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M7 17L17 7M7 7h10v10"/>
+              </svg>
+            </div>
+          </a>
 
-        <a class="service-btn"
-           href="https://wa.me/6282156067048?text=Halo%20Savlune%2C%20saya%20ingin%20menjual%20tanah."
-           target="_blank" rel="noopener">
-          <span class="btn-icon">🌿</span>
-          <span class="btn-type">Jual</span>
-          <span class="btn-label">Tanah</span>
-          <span class="btn-arrow">↗</span>
-        </a>
+          <!-- Jual Tanah -->
+          <a class="service-btn"
+             href="https://wa.me/6282156067048?text=Halo%20Savlune%2C%20saya%20ingin%20menjual%20tanah."
+             target="_blank" rel="noopener">
+            <div class="card-icon-zone">
+              <div class="card-svg-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 20h20"/>
+                  <path d="M4 20V10l4-4 4 4 4-6 4 6v10"/>
+                  <path d="M8 20v-5h3v5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-badge">Jual</span>
+              <span class="card-title">Tanah</span>
+              <span class="card-tagline">Kavling atau lahan luas — nilai terbaik untuk aset Anda</span>
+            </div>
+            <div class="card-arrow-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M7 17L17 7M7 7h10v10"/>
+              </svg>
+            </div>
+          </a>
 
-        <a class="service-btn"
-           href="https://wa.me/6282156067048?text=Halo%20Savlune%2C%20saya%20ingin%20menjual%20mobil%20second."
-           target="_blank" rel="noopener">
-          <span class="btn-icon">🚗</span>
-          <span class="btn-type">Jual</span>
-          <span class="btn-label">Mobil Second</span>
-          <span class="btn-arrow">↗</span>
-        </a>
+          <!-- Jual Mobil Second -->
+          <a class="service-btn"
+             href="https://wa.me/6282156067048?text=Halo%20Savlune%2C%20saya%20ingin%20menjual%20mobil%20second."
+             target="_blank" rel="noopener">
+            <div class="card-icon-zone">
+              <div class="card-svg-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 17H3v-5l2-5h14l2 5v5h-2"/>
+                  <circle cx="7.5" cy="17.5" r="1.5"/>
+                  <circle cx="16.5" cy="17.5" r="1.5"/>
+                  <path d="M5 12h14"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-badge">Jual</span>
+              <span class="card-title">Mobil</span>
+              <span class="card-tagline">Harga kompetitif, proses cepat, pembeli nyata</span>
+            </div>
+            <div class="card-arrow-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M7 17L17 7M7 7h10v10"/>
+              </svg>
+            </div>
+          </a>
 
-        <a class="service-btn"
-           href="https://wa.me/6282156067048?text=Halo%20Savlune%2C%20saya%20ingin%20beli%20rumah."
-           target="_blank" rel="noopener">
-          <span class="btn-icon">🏡</span>
-          <span class="btn-type">Beli</span>
-          <span class="btn-label">Rumah</span>
-          <span class="btn-arrow">↗</span>
-        </a>
-
-        <a class="service-btn"
-           href="https://wa.me/6282156067048?text=Halo%20Savlune%2C%20saya%20ingin%20beli%20mobil."
-           target="_blank" rel="noopener">
-          <span class="btn-icon">🚙</span>
-          <span class="btn-type">Beli</span>
-          <span class="btn-label">Mobil</span>
-          <span class="btn-arrow">↗</span>
-        </a>
-
-        <a class="service-btn"
-           href="https://wa.me/6282156067048?text=Halo%20Savlune%2C%20saya%20ingin%20beli%20tanah."
-           target="_blank" rel="noopener">
-          <span class="btn-icon">📐</span>
-          <span class="btn-type">Beli</span>
-          <span class="btn-label">Tanah</span>
-          <span class="btn-arrow">↗</span>
-        </a>
-
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- WHY SAVLUNE -->
-  <section class="reveal">
-    <div class="container">
-      <div class="why-section">
-        <p class="why-eyebrow">Kenapa Memilih Kami</p>
-        <h2 class="why-title">Kenapa Pilih SAVLUNE?</h2>
-        <p class="why-body">
-          SAVLUNE membantu mempertemukan penjual dan pembeli dengan cara yang lebih cepat, rapi, dan profesional. Cocok untuk Anda yang ingin menjual aset atau mencari properti, tanah, dan kendaraan — dengan proses yang lebih mudah dan terpercaya.
-        </p>
-      </div>
-    </div>
-  </section>
+      <!-- BELI GROUP -->
+      <div class="group-block">
+        <div class="group-header">
+          <span class="group-tag buy">Saya Ingin Beli</span>
+          <span class="group-line"></span>
+        </div>
+        <div class="services-grid">
 
-  <!-- CTA -->
-  <section class="cta-section reveal">
-    <div class="container">
-      <p class="cta-label">Mulai sekarang, gratis konsultasi</p>
-      <a class="cta-main-btn"
-         href="https://wa.me/6282156067048?text=Halo%20Savlune%2C%20saya%20ingin%20konsultasi%20jual%20beli."
-         target="_blank" rel="noopener">
-        <span class="wa-icon">💬</span>
-        Konsultasi Sekarang
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-brand">SAVLUNE</div>
-      <p class="footer-copy">Platform Jual &amp; Beli Properti, Tanah, dan Mobil</p>
-    </div>
-  </footer>
-
-  <script>
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    reveals.forEach(el => io.observe(el));
-  </script>
-</body>
-  </html>
+          <!-- Beli Rumah -->
+          <a class="service-btn"
+             href="https://wa.me/6282156067048?text=Halo%20Savlune%2C%20saya%20ingin%20beli%20rumah."
+             target="_blank" rel="noopener">
+            <div class="card-icon-zone">
+              <div class="card-svg-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+                  <path d="M9 21V12h6v9"/>
+                  <circle cx="12" cy="9" r="1" fill="#C9A96E"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-
