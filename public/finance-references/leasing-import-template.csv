@@ -1,0 +1,2 @@
+vehicle_slug,variant_id,leasing,scheme,otr,tenor_months,installment_count,total_first_payment,monthly_installment,region,valid_from,valid_until,verified,notes
+destinator,exceed,Mandiri Utama Finance,ADDM,300000000,36,35,85000000,7500000,Samarinda,2026-07-16,2026-08-16,false,Contoh baris — ganti dengan data resmi dari leasing
