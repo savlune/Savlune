@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-charcoal-950 text-offwhite antialiased;
+  }
+
+  ::selection {
+    @apply bg-savlune-gold/30 text-offwhite;
+  }
+}
+
+@layer components {
+  .section-number {
+    @apply font-display text-savlune-gold text-sm tracking-widest2 uppercase;
+  }
+
+  .hairline {
+    @apply h-px w-full bg-white/10;
+  }
+
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6 md:px-10 lg:px-16;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

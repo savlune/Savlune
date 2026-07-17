@@ -1,0 +1,33 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# testing
+/coverage
+/test-results
+/playwright-report
+/blob-report
+
+# env
+.env
+.env.local
+.env.*.local
+
+# local lead / import storage (dev fallback, may contain PII — never commit)
+src/data/leads.local.json
+src/data/leasing-imports.local.json
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
